@@ -38,7 +38,7 @@ app.get('/usuarios', async (req, res) => {
 
 app.get('/productos', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM productos');
+    const result = await pool.query('SELECT * FROM productitos');
     res.json(result.rows);
   } catch (error) {
     console.error(error);
@@ -46,7 +46,14 @@ app.get('/productos', async (req, res) => {
   }
 });
 
-app.get('/pedidos', async (req, res) => {
+nahum@DESKTOP-19ARN64:~/proyecto-monolito-microservicios$ git commitm -m "Error prueba"
+git: 'commitm' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+nahum@DESKTOP-19ARN64:~/proyecto-monolito-microservicios$ git push origin main
+Everything up-to-date
+nahum@DESKTOP-19ARN64:~/proyecto-monolito-microservicios$app.get('/pedidos', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM pedidos');
     res.json(result.rows);
